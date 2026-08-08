@@ -1,0 +1,60 @@
+Body
+JSON Response structure for historical corporate donors endpoint.
+
+array of:
+BioGuideID
+string
+CandidateName
+string
+CompanyCMTENM
+string
+TransactionDate
+string<date-time>
+TransactionAmount
+integer
+Ticker
+string
+CommitteeName
+string
+Cycle
+integer
+TransactionType
+string
+CompanyCMTEID
+string
+Uploaded
+string
+Token
+:
+ticker*
+:
+bioguide_id
+:
+cycle
+:
+page
+:
+page_size
+:
+Send API Request
+library(httr)
+
+url <- "https://api.quiverquant.com/beta/historical/corporatedonors/{ticker}"
+
+response <- VERB("GET", url, add_headers('Authorization' = 'Bearer 123'), content_type("application/octet-stream"), accept("application/json"))
+
+content(response, "text")
+[
+  {
+    "BioGuideID": "string",
+    "CandidateName": "string",
+    "CompanyCMTENM": "string",
+    "TransactionDate": "2019-08-24T14:15:22Z",
+    "TransactionAmount": 0,
+    "Ticker": "string",
+    "CommitteeName": "string",
+    "Cycle": 0,
+    "TransactionType": "string",
+    "CompanyCMTEID": "string",
+    "Uploaded": "string"
+  }
