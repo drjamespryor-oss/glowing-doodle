@@ -1,0 +1,15 @@
+bioguide_id
+string
+Congressperson's BioGuide id
+
+cycle
+string
+Filter donors by election cycle (e.g., 2024)
+
+page
+integer
+Page number
+
+page_size
+integer
+Items / page
